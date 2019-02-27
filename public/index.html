@@ -12,12 +12,13 @@
     fournissant des services de protection de pointe pour les véhicules
     et les biens...">
   <meta name="keywords" content="GPS, Tracker, voiture, Géolocalisation, protection, Surveillance, controle">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">
-  <link href="css/localstyle.css">
+  <link href="css/localstyle.css" rel="stylesheet">
 </head>
 
 <body class="university-lp">
@@ -26,7 +27,7 @@
   <header>
 
     <!--Navbar-->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <nav class="navbar fixed-top navbar-expand-lg  navbar-dark indigo darken-4 white-text scrolling-navbar">
       <div class="container">
         <a class="navbar-brand" href="#">
           <strong>Nextlan Solutions</strong>
@@ -85,8 +86,8 @@
     <!--Navbar-->
 
     <!-- Intro Section -->
-    <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/67.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-      <div class="mask rgba-black-strong">
+    <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' >
+      <div class="mask morpheus-den-gradient">
         <div class="container h-100 d-flex justify-content-center align-items-center">
           <div class="row smooth-scroll">
             <div class="col-md-12 white-text text-center">
@@ -539,7 +540,7 @@
                     personnel et autres</a>
               </dt>
               <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
-                <p> 60 000 FCFA<br>5 000 FCFA</p>
+                <p> 60 000 FCFA<br>5 000 FCFA DE REDEVANCE MENSUELLE *</p>
                  <p>
                 <ul>
                     <li>Géolocalisation et traçage en temps réel</li>
@@ -557,7 +558,7 @@
                   KIT GPS pour CAMIONS, BUS et ENGINS</a>
               </dt>
               <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
-                <p> 80 000 FCFA<br>8 000 FCFA</p>
+                <p> 80 000 FCFA<br>8 000 FCFA DE REDEVANCE MENSUELLE *</p>
                 <p>
                 <ul>
                       <li>Géolocalisation et traçage en temps réel</li>
@@ -576,7 +577,7 @@
                 </a>
               </dt>
               <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
-                <p> 150 000 FCFA<br>10 000 FCFA</p>
+                <p> 150 000 FCFA<br>10 000 FCFA DE REDEVANCE MENSUELLE *</p>
                 <p>
                 <ul>
                     <li>Surveillance en continue du niveau de carburant</li>
@@ -605,7 +606,7 @@
                 </a>
               </dt>
               <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
-                <p> 20 000 FCFA<br>2 000 FCFA</p>
+                <p> 20 000 FCFA<br>2 000 FCFA DE REDEVANCE MENSUELLE *</p>
                 <p>
                   Géolocalisation et traçage en temps réel
                 </p>
@@ -616,7 +617,7 @@
                 </a>
               </dt>
               <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
-                <p> 45 000 FCFA<br>3 000 FCFA</p>
+                <p> 45 000 FCFA<br>3 000 FCFA DE REDEVANCE MENSUELLE *</p>
                 <p>
                   <ul>
                     <li>Géolocalisation et traçage en temps réel</li>
@@ -1159,19 +1160,15 @@
           <!--Description-->
           <div class="container">
             <!--Section: Contact v.2-->
-<section class="mb-4">
+            <section class="mb-4">
+              <div class="row">
 
-  
- 
-
-    <div class="row">
-
-        <!--Grid column-->
-        <div class="col-md-9 mb-md-0 mb-5">
-            <form id ="contact-form" name="contact-form" action="mail.php" method="POST"  onsubmit="return validateForm()">
+              <!--Grid column-->
+              <div class="col-md-9 mb-md-0 mb-5">
+                <form id ="contact-form" name="contact-form" action="mail.php" method="POST"  onsubmit="return validateForm()">
 
                 <!--Grid row-->
-                <div class="row">
+                  <div class="row">
 
                     <!--Grid column-->
                     <div class="col-md-6">
@@ -1191,22 +1188,22 @@
                     </div>
                     <!--Grid column-->
 
-                </div>
-                <!--Grid row-->
+                  </div>
+                  <!--Grid row-->
 
-                <!--Grid row-->
-                <div class="row">
+                  <!--Grid row-->
+                  <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
                             <input type="text" id="subject" name="subject" class="form-control">
                             <label for="subject" class="">Suject</label>
                         </div>
                     </div>
-                </div>
-                <!--Grid row-->
+                  </div>
+                  <!--Grid row-->
 
-                <!--Grid row-->
-                <div class="row">
+                  <!--Grid row-->
+                  <div class="row">
 
                     <!--Grid column-->
                     <div class="col-md-12">
@@ -1217,16 +1214,16 @@
                         </div>
 
                     </div>
-                </div>
-                <!--Grid row-->
+                  </div>
+                  <!--Grid row-->
 
-            </form>
+                </form>
 
-            <div class="text-center text-md-left">
+              <div class="text-center text-md-left">
                 <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Envoyer</a>
+              </div>
+              <div class="status"></div>
             </div>
-            <div class="status"></div>
-        </div>
         <!--Grid column-->
 
         <!--Grid column-->
@@ -1260,7 +1257,7 @@
        
 
       </div>
-      
+    </div>  
     <!--Footer Links-->
 
     <!--Copyright-->
@@ -1275,8 +1272,17 @@
   <!--Footer-->
 
   <!--SCRIPTS-->
+  <script type="text/javascript" src="polyfills.js"></script>
   <script type="text/javascript">
     if ('serviceWorker' in navigator) {
+      let deferredPrompt;
+      window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent Chrome 67 and earlier from automatically showing the prompt
+      e.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+
+      });
       window.addEventListener('load', function() {
       navigator.serviceWorker.register('/sw.js').then(function(registration) {
       // Registration was successful
@@ -1314,44 +1320,105 @@
       $('.mdb-select').material_select();
     });
     $('[data-toggle="popover-hover"]').popover({
-  html: true,
-  trigger: 'hover',
-  placement: 'bottom',
-});
+      html: true,
+      trigger: 'hover',
+      placement: 'bottom',
+    });
   </script>
   <script>
-function validateForm() {
+    function validateForm() {
 
-    document.getElementById('status').innerHTML = "Sending...";
-    formData = {
-        'name'     : $('input[name=name]').val(),
-        'email'    : $('input[name=email]').val(),
-        'subject'  : $('input[name=subject]').val(),
-        'message'  : $('textarea[name=message]').val()
-    };
+      document.getElementById('status').innerHTML = "Sending...";
+      formData = {
+          'name'     : $('input[name=name]').val(),
+          'email'    : $('input[name=email]').val(),
+          'subject'  : $('input[name=subject]').val(),
+          'message'  : $('textarea[name=message]').val()
+      };
 
 
-   $.ajax({
-    url : "mail.php",
-    type: "POST",
-    data : formData,
-    success: function(data, textStatus, jqXHR)
-    {
+      $.ajax({
+        url : "mail.php",
+        type: "POST",
+        data : formData,
+        success: function(data, textStatus, jqXHR)
+          {
 
-        $('#status').text(data.message);
-        if (data.code) //If mail was sent successfully, reset the form.
-        $('#contact-form').closest('form').find("input[type=text], textarea").val("");
-    },
-    error: function (jqXHR, textStatus, errorThrown)
-    {
-        $('#status').text(jqXHR);
+            $('#status').text(data.message);
+            if (data.code) //If mail was sent successfully, reset the form.
+            $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+          },
+        error: function (jqXHR, textStatus, errorThrown)
+          {
+            $('#status').text(jqXHR);
+          }
+      });
+
+
+
     }
-});
+    //uses classList, setAttribute, and querySelectorAll
+  //if you want this to work in IE8/9 youll need to polyfill these
+  (function(){
+	  var d = document,
+	  accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+	  setAria,
+	  setAccordionAria,
+	  switchAccordion,
+    touchSupported = ('ontouchstart' in window),
+    pointerSupported = ('pointerdown' in window);
+  
+    skipClickDelay = function(e){
+      e.preventDefault();
+      e.target.click();
+    }
 
-
-
-}
-    </script>
+		setAriaAttr = function(el, ariaType, newProperty){
+		  el.setAttribute(ariaType, newProperty);
+	  };
+	  setAccordionAria = function(el1, el2, expanded){
+		switch(expanded) {
+      case "true":
+      	setAriaAttr(el1, 'aria-expanded', 'true');
+      	setAriaAttr(el2, 'aria-hidden', 'false');
+      	break;
+      case "false":
+      	setAriaAttr(el1, 'aria-expanded', 'false');
+      	setAriaAttr(el2, 'aria-hidden', 'true');
+      	break;
+      default:
+				break;
+		}
+	};
+  //function
+  switchAccordion = function(e) {
+    console.log("triggered");
+	  e.preventDefault();
+	  var thisAnswer = e.target.parentNode.nextElementSibling;
+	  var thisQuestion = e.target;
+	  if(thisAnswer.classList.contains('is-collapsed')) {
+		  setAccordionAria(thisQuestion, thisAnswer, 'true');
+	  } else {
+		  setAccordionAria(thisQuestion, thisAnswer, 'false');
+	  }
+  	thisQuestion.classList.toggle('is-collapsed');
+  	thisQuestion.classList.toggle('is-expanded');
+		thisAnswer.classList.toggle('is-collapsed');
+		thisAnswer.classList.toggle('is-expanded');
+ 	
+  	thisAnswer.classList.toggle('animateIn');
+	};
+	for (var i=0,len=accordionToggles.length; i<len; i++) {
+		if(touchSupported) {
+      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+    }
+    if(pointerSupported){
+      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+    }
+    accordionToggles[i].addEventListener('click', switchAccordion, false);
+  }
+  })();
+  </script>
 </body>
 
 </html>
