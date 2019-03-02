@@ -1259,7 +1259,7 @@
       </div>
     </div>  
     <!--Footer Links-->
-
+    <button id="add">add</button>
     <!--Copyright-->
     <div class="footer-copyright py-3 text-center">
       <div class="container-fluid">
@@ -1276,6 +1276,8 @@
   <script type="text/javascript">
     if ('serviceWorker' in navigator) {
       let deferredPrompt;
+      
+
       window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent Chrome 67 and earlier from automatically showing the prompt
       e.preventDefault();
