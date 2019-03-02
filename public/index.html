@@ -1461,22 +1461,10 @@
   };
   var passiveSupported = false;
 
-  try {
-    var options = Object.defineProperty({}, "passive", {
-      get: function() {
-        passiveSupported = true;
-      }
-    });
 
-    window.addEventListener("test", options, options);
-    window.removeEventListener("test", options, options);
-  } catch(err) {
-    passiveSupported = false;
-  }
   //function
   switchAccordion = function(e) {
-    //console.log("triggered");
-    if(!passiveSupported)
+    console.log("triggered");
 	  e.preventDefault();
 	  var thisAnswer = e.target.parentNode.nextElementSibling;
 	  var thisQuestion = e.target;
@@ -1494,15 +1482,12 @@
 	};
 	for (var i=0,len=accordionToggles.length; i<len; i++) {
 		if(touchSupported) {
-      accordionToggles[i].addEventListener('touchstart', skipClickDelay, passiveSupported
-                               ? { passive: true } : false);
+      accordionToggles[i].addEventListener('touchstart', skipClickDelay,  false);
     }
     if(pointerSupported){
-      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, passiveSupported
-                               ? { passive: true } : false);
+      accordionToggles[i].addEventListener('pointerdown', skipClickDelay,  false);
     }
-    accordionToggles[i].addEventListener('click', switchAccordion, passiveSupported
-                               ? { passive: true } : false);
+    accordionToggles[i].addEventListener('click', switchAccordion,  false);
   }
   })();
   </script>
