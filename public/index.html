@@ -125,10 +125,50 @@
 
           <!--First column-->
           <div class="col-lg-5 col-md-12 mb-5 pb-4 wow fadeIn" data-wow-delay="0.4s">
+            <div class="geo-svg-container">
+                <svg viewBox="-20 -50 480 500">
+                    <desc>NextLan solution</desc>
+                    <defs>
+                        <!--circles at the top-->
+                        <g id="svg-geo">
+                            <!--triangle at the bottom-->
+                            <g id="svg-geo-triangle">
+                                <path d="m 220 100 l 80 200 l80 -200 l100 0 z" fill="#4285f4"/>
+                            </g>
+                            <!--circles at the top-->
+                            <g id="svg-geo-circle">
+                                <circle cx="300" cy="83" r="81" fill="#4285f4" />
+                                <circle cx="300" cy="83" r="60" fill="white" />
+                                <circle cx="300" cy="83" r="30" fill="#4285f4" />
+                            </g>
+                        </g>
+                    </defs>
+                    <!--path for 'jump' of geo icon-->
+                    <path d="m 0 0 l 0 -25 z" id="jump" stroke="" stroke-width="7"/>
 
+                    <!--geo icon-->
+                    <use xlink:href="#svg-geo">
+                        <!--jump calcMode = "discrete | linear | paced | spline"-->
+                        <animateMotion dur="1.5s" repeatCount="indefinite" fill="remove" calcMode="linear">
+                            <mpath xlink:href="#jump" />
+                        </animateMotion>
+                    </use>
+
+                    <!--line below-->
+                    <path d="M 600 320 L 0 320 L 600 320" id="bar" stroke="black" stroke-width="7" />
+                    <circle cx="0" cy="0" r="17" fill="#4285f4">
+                        <!--move circle on search bar-->
+                        <animateMotion dur="3s" repeatCount="indefinite" fill="remove">
+                            <mpath xlink:href="#bar"/>
+                        </animateMotion>
+                    </circle>
+                </svg>
+            </div>
+              
             <!--Image-->
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%289%29.jpg" class="img-fluid z-depth-1 rounded"
-              alt="My photo">
+            <!--<img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%289%29.jpg" class="img-fluid z-depth-1 rounded"
+              alt="My photo">-->
+              
 
           </div>
           <!--First column-->
@@ -137,25 +177,42 @@
           <div class="col-lg-6 dark-grey-text ml-lg-auto col-md-12 wow fadeIn" data-wow-delay="0.4s">
 
             <!--Description-->
-            <p align="justify">Crée en 2016, <strong>Nextlan Solution</strong> est une entreprise fournissant des services de protection
-              de pointe pour les véhicules et les biens. <strong>Nextlan Solution</strong> est spécialisé dans la prévention des vols, 
-              la localisation temps réel des véhicules, et la fourniture des informations relatives aux mouvements de vos véhicules et engins.
-            </p>
+            <div class="description-container">
+                <div class="description-card">
+                    <div class="description-text">
+                        <p align="justify">Crée en 2016, <strong>Nextlan Solution</strong> est une entreprise fournissant des services de protection
+                          de pointe pour les véhicules et les biens. <strong>Nextlan Solution</strong> est spécialisé dans la prévention des vols, 
+                          la localisation temps réel des véhicules, et la fourniture des informations relatives aux mouvements de vos véhicules et engins.
+                        </p>
 
-            <p align="justify">Le système proposé par <strong>Nextlan Solution</strong> est doté d'une technologie de pointe unique, qui vous 
-              permet en plus de contrôler et sécuriser les vehicules de la flotte, d'être à mesure de maitriser sa gestion sans effort à travers un 
-              certain nombre de modules et outils conviviaux; vous permettant ainsi de réduire les coûtste de réaliser des économies de 
-              maintenance extraordinaires.
-            </p>
-            <p>
-              Portefeuille :
-            </p>
-            <ul>
-              <li>Geolocalisation</li>
-              <li>Gestion de flotte</li>
-              <li>Gestion Carburant</li>
-              <li>Camera ambarquée.</li>
-            </ul>
+                        <p align="justify">Le système proposé par <strong>Nextlan Solution</strong> est doté d'une technologie de pointe unique, qui vous 
+                          permet en plus de contrôler et sécuriser les vehicules de la flotte, d'être à mesure de maitriser sa gestion sans effort à travers un 
+                          certain nombre de modules et outils conviviaux; vous permettant ainsi de réduire les coûtste de réaliser des économies de 
+                          maintenance extraordinaires.
+                        </p>
+                    </div>
+                    <div class="description-footer">
+                        <div class="header">Portefeuille</div>
+                        <div class="geo part">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                            <span class="label">Geolocalisation</span>
+                        </div>
+                        <div class="flote part">
+                            <i class="fas fa-truck fa-2x"></i>
+                            <span class="label">Gestion de flotte</span>
+                        </div>
+                        <div class="caburant part">
+                            <i class="fas fa-gas-pump fa-2x"></i>
+                            <span class="label">Gestion Carburant</span>
+                        </div>
+                        <div class="camera part">
+                            <i class="fas fa-camera-retro fa-2x"></i>
+                            <span class="label">Camera ambarquée</span>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+           
 
           </div>
           <!--Second column-->
@@ -233,13 +290,13 @@
                       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).jpg" alt="First slide">
+                            <img class="d-block w-100" src="img/blank-img.jpg" alt="First slide">
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).jpg" alt="Second slide">
+                            <img class="d-block w-100" src="img/blank-img.jpg" alt="Second slide">
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).jpg" alt="Third slide">
+                            <img class="d-block w-100" src="img/blank-img.jpg" alt="Third slide">
                           </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -294,13 +351,13 @@
                       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                           <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).jpg" alt="First slide">
+                              <img class="d-block w-100" src="img/blank-img.jpg" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).jpg" alt="Second slide">
+                              <img class="d-block w-100" src="img/blank-img.jpg" alt="Second slide">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).jpg" alt="Third slide">
+                              <img class="d-block w-100" src="img/blank-img.jpg" alt="Third slide">
                             </div>
                           </div>
                           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -359,13 +416,13 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).jpg" alt="First slide">
+                            <img class="d-block w-100" src="img/blank-img.jpg" alt="First slide">
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).jpg" alt="Second slide">
+                            <img class="d-block w-100" src="img/blank-img.jpg" alt="Second slide">
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).jpg" alt="Third slide">
+                            <img class="d-block w-100" src="img/blank-img.jpg" alt="Third slide">
                           </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -421,13 +478,13 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).jpg" alt="First slide">
+                            <img class="d-block w-100" src="img/blank-img.jpg" alt="First slide">
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).jpg" alt="Second slide">
+                            <img class="d-block w-100" src="img/blank-img.jpg" alt="Second slide">
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).jpg" alt="Third slide">
+                            <img class="d-block w-100" src="img/blank-img.jpg" alt="Third slide">
                           </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -449,21 +506,34 @@
                     <h4 class="mb-5">Gestion Carburant</h4>
 
                     <!--Description-->
-                    <p class="text-muted">Cette solution est essentiellement dédiée aux entreprises exerçant dans le
+                    <p class="text-muted" align="justify">Cette solution est essentiellement dédiée aux entreprises exerçant dans le
                       domaine des mines, du transport, de l’industrie et des services à valeurs
                       ajoutés dont les flux de consommation en carburant sont importants.
                       Les services proposées pour cette solution intègre le monitoring, le suivi de la
                       consommation, des approvisionnements et l’alerte Vol dans les cuves.</p>
-                      <ul class="text-muted">
-                        <li>Surveillance en continue du niveau de carburant</li>
-                        <li>Gestion par seuil d’alerte de niveau bas</li>
-                        <li>Gestion multi-cuve, multi-site</li>
-                        <li>Gestion de l’approvisionnement en carburant de vos camions et sites de manière
-                          simple et éfficace</li>
-                        <li>Réduction des couts d’exploitation via la Télémétrie</li>
-                        <li>Réduction du taux des livraisons d’urgence.</li>
+                      <div class="pembatas">
+                          <ul>
+                            <li>
+                                <span>1</span><span>Surveillance en continue du niveau de carburant</span>
+                            </li>
+                            <li>
+                                <span>2</span><span>Gestion par seuil d’alerte de niveau bas</span>
+                            </li>
+                            <li>
+                                <sapn>3</sapn><span>Gestion multi-cuve, multi-site</span>
+                            </li>
+                            <li>
+                                <span>4</span><span>Gestion de l’approvisionnement en carburant de vos camions et sites de manière simple et éfficace</span>
+                            </li>
+                            <li>
+                                <span>5</span><span>Réduction des couts d’exploitation via la Télémétrie</span>
+                            </li>
+                            <li>
+                                <span>6</span><span>Réduction du taux des livraisons d’urgence.</span>
+                            </li>
 
-                      </ul>
+                          </ul>
+                      </div>
                   </div>
                   <!--Second column-->
                 </div>
@@ -506,10 +576,7 @@
           <div class="col-sm-12 col-md-5">
                   <!-- Featured image -->
             <div class="view overlay">
-              <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid" alt="Sample image for first version of blog listing">
-              <a href="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg">
-                <div class="mask rgba-white-slight"></div>
-              </a>
+              <img src="img/gps.png" class="img-fluid" alt="Sample image for first version of blog listing">
             </div>
           </div>
           <div class="col-sm-12 col-md-7 dark-grey-text">
@@ -670,7 +737,7 @@
               <div class="card">
                 <!--Card image-->
                 <div class="view overlay">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/images/51.jpg" class="card-img-top" alt="">
+                  <img src="img/callcenter.png" class="card-img-top" alt="">
                   <a>
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -708,7 +775,7 @@
               <div class="card">
                 <!--Card image-->
                 <div class="view overlay">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/images/40.jpg" class="card-img-top" alt="">
+                  <img src="img/inginf.png" class="card-img-top" alt="">
                   <a>
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -746,7 +813,7 @@
               <div class="card">
                 <!--Card image-->
                 <div class="view overlay">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/images/56.jpg" class="card-img-top" alt="">
+                  <img src="img/run.png" class="card-img-top" alt="">
                   <a>
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -785,7 +852,7 @@
               <div class="card">
                 <!--Card image-->
                 <div class="view overlay">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/images/57.jpg" class="card-img-top" alt="">
+                  <img src="img/training.jpg" class="card-img-top" alt="">
                   <a>
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -868,10 +935,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(26).jpg" class="rounded-circle img-fluid">
+                      <img src="img/user.png" class="rounded-circle img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Anna Deynah</h4>
+                    <h4 class="font-weight-bold">Name</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
@@ -896,10 +963,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" class="rounded-circle img-fluid">
+                      <img src="img/user.png" class="rounded-circle img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">John Doe</h4>
+                    <h4 class="font-weight-bold">Name</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Ut enim ad minima veniam, quis nostrum exercitationem ullam
@@ -924,10 +991,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle img-fluid">
+                      <img src="img/user.png" class="rounded-circle img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Abbey Clark</h4>
+                    <h4 class="font-weight-bold">Name</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Quis autem vel eum iure reprehenderit qui in ea voluptate velit
@@ -957,10 +1024,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg" class="rounded-circle img-fluid">
+                      <img src="img/user.png" class="rounded-circle img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Blake Dabney</h4>
+                    <h4 class="font-weight-bold">Name</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Ut enim ad minima veniam, quis nostrum exercitationem ullam
@@ -984,10 +1051,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(6).jpg" class="rounded-circle img-fluid">
+                      <img src="img/user.png" class="rounded-circle img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Andrea Clay</h4>
+                    <h4 class="font-weight-bold">Name</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
@@ -1011,10 +1078,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(7).jpg" class="rounded-circle img-fluid">
+                      <img src="img/user.png" class="rounded-circle img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Cami Gosse</h4>
+                    <h4 class="font-weight-bold">Name</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -1045,10 +1112,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" class="rounded-circle img-fluid">
+                      <img src="img/user.png" class="rounded-circle img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Bobby Haley</h4>
+                    <h4 class="font-weight-bold">Name</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
@@ -1073,10 +1140,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-fluid">
+                      <img src="img/user.png" class="rounded-circle img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Elisa Janson</h4>
+                    <h4 class="font-weight-bold">Name</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -1101,10 +1168,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid">
+                      <img src="img/user.png" class="rounded-circle img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Robert Jacobs</h4>
+                    <h4 class="font-weight-bold">Name</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Ut enim ad minima veniam, quis nostrum exercitationem ullam
@@ -1230,7 +1297,7 @@
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
                 <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p>San Francisco, CA 94126, USA</p>
+                    <p>TSINGA Face Camp SIC, Yaounde, Cameroun</p>
                 </li>
 
                 <li><i class="fas fa-phone mt-4 fa-2x"></i>
