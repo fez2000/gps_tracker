@@ -935,10 +935,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="img/user.png" class="rounded-circle img-fluid">
+                      <img src="img/armp.png" class=" img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Name</h4>
+                    <h4 class="font-weight-bold">ARMP</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
@@ -963,10 +963,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="img/user.png" class="rounded-circle img-fluid">
+                      <img src="img/buhler.png" class=" img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Name</h4>
+                    <h4 class="font-weight-bold">BUHLER</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Ut enim ad minima veniam, quis nostrum exercitationem ullam
@@ -991,10 +991,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="img/user.png" class="rounded-circle img-fluid">
+                      <img src="img/bunec.png" class=" img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Name</h4>
+                    <h4 class="font-weight-bold">BUNEC</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Quis autem vel eum iure reprehenderit qui in ea voluptate velit
@@ -1024,10 +1024,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="img/user.png" class="rounded-circle img-fluid">
+                      <img src="img/fokou.png" class=" img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Name</h4>
+                    <h4 class="font-weight-bold">FOKOU</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Ut enim ad minima veniam, quis nostrum exercitationem ullam
@@ -1051,10 +1051,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="img/user.png" class="rounded-circle img-fluid">
+                      <img src="img/edc.png" class=" img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Name</h4>
+                    <h4 class="font-weight-bold">EDC</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
@@ -1078,10 +1078,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="img/user.png" class="rounded-circle img-fluid">
+                      <img src="img/iss.png" class=" img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Name</h4>
+                    <h4 class="font-weight-bold">ISS</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -1112,10 +1112,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="img/user.png" class="rounded-circle img-fluid">
+                      <img src="img/primo.png" class=" img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Name</h4>
+                    <h4 class="font-weight-bold">PRIMO</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
@@ -1140,10 +1140,10 @@
                   <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar mx-auto mb-4">
-                      <img src="img/user.png" class="rounded-circle img-fluid">
+                      <img src="img/utams.png" class=" img-fluid">
                     </div>
                     <!--Content-->
-                    <h4 class="font-weight-bold">Name</h4>
+                    <h4 class="font-weight-bold">UTAMS</h4>
 
                     <p>
                       <i class="fas fa-quote-left"></i> At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -1326,7 +1326,7 @@
       </div>
     </div>  
     <!--Footer Links-->
-    <button id="add">add</button>
+   
     <!--Copyright-->
     <div class="footer-copyright py-3 text-center">
       <div class="container-fluid">
@@ -1458,7 +1458,21 @@
       default:
 				break;
 		}
-	};
+  };
+  var passiveSupported = false;
+
+  try {
+    var options = Object.defineProperty({}, "passive", {
+      get: function() {
+        passiveSupported = true;
+      }
+    });
+
+    window.addEventListener("test", options, options);
+    window.removeEventListener("test", options, options);
+  } catch(err) {
+    passiveSupported = false;
+  }
   //function
   switchAccordion = function(e) {
     console.log("triggered");
@@ -1479,12 +1493,15 @@
 	};
 	for (var i=0,len=accordionToggles.length; i<len; i++) {
 		if(touchSupported) {
-      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+      accordionToggles[i].addEventListener('touchstart', skipClickDelay, passiveSupported
+                               ? { passive: true } : false);
     }
     if(pointerSupported){
-      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, passiveSupported
+                               ? { passive: true } : false);
     }
-    accordionToggles[i].addEventListener('click', switchAccordion, false);
+    accordionToggles[i].addEventListener('click', switchAccordion, passiveSupported
+                               ? { passive: true } : false);
   }
   })();
   </script>

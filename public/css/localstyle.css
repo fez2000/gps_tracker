@@ -19,7 +19,7 @@ header nav a{
   display: block;
   height: 1em;
   width: 100%;
-  background-color: #2ba659;
+  background-color: #2022bd;
 }
 .accordion dd, .accordion__panel {
   background-color: #eee;
@@ -39,7 +39,7 @@ header nav a{
   padding: 2em 0 2em 0;
 }
 .accordionTitle, .accordion__Heading {
-  background-color: #38cc70;
+  background-color: #2629d3;
   text-align: center;
   font-weight: 700;
   padding: 2em;
@@ -47,7 +47,7 @@ header nav a{
   text-decoration: none;
   color: #fff;
   transition: background-color 0.5s ease-in-out;
-  border-bottom: 1px solid #30bb64;
+  border-bottom: 1px solid #2024ec;
 }
 .accordionTitle:before, .accordion__Heading:before {
   content: "+";
@@ -57,10 +57,10 @@ header nav a{
   transition: transform 0.3s ease-in-out;
 }
 .accordionTitle:hover, .accordion__Heading:hover {
-  background-color: #2ba659;
+  background-color: #1d1fa7;
 }
 .accordionTitleActive, .accordionTitle.is-expanded {
-  background-color: #2ba659;
+  background-color: #1d1fa7;
 }
 .accordionTitleActive:before, .accordionTitle.is-expanded:before {
   transform: rotate(-225deg);
@@ -156,7 +156,7 @@ header nav a{
     padding-top: 20px;
     text-align: center;
     display: inline-block;
-    border-right: 1px solid #7575757;
+    border-right: 1px solid #757575;
 }
 
 .description-card .description-footer .part:last-child{
