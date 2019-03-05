@@ -72,9 +72,12 @@ header nav a{
   max-height: 50em;
   transition: max-height 1s;
 }
+.arrow {
+  list-style: square inside url("/img/arrow.svg");
+}
 @media screen and (min-width: 48em) {
   .accordionItem {
-    max-height: 15em;
+    max-height: 30em;
     transition: max-height 0.5s;
   }
 }
@@ -274,10 +277,14 @@ html,
       }
    
     }
-
+    @media (min-width:980px) and (max-width:1200px){
+      .ld{
+        display: none;
+      }
+    }
     @media (min-width: 800px) and (max-width: 850px) {
         .navbar:not(.top-nav-collapse) {
-            background: #1C2A48!important;
+            background: #007bff!important;
         }
         .navbar {
           box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12) !important;
