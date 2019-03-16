@@ -6,6 +6,9 @@ body {
 header nav a{
   color: white;
 }
+.font{
+  font-size: x-large;
+}
 .heading-primary {
   font-size: 2em;
   padding: 2em;
@@ -13,6 +16,21 @@ header nav a{
 }
 .accordion dl, .accordion-list {
   border: 1px solid #ddd;
+}
+.font-size-smaller{
+  font-size: smaller;
+}
+.avatar{
+  height: 200px;
+}
+.photoAvatar{
+  height: 150px;
+}
+.card{
+  height: 500px;
+}
+.cardImg{
+  height: 275px;
 }
 .accordion dl:after, .accordion-list:after {
   content: "";
