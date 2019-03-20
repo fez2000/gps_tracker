@@ -195,25 +195,25 @@ header nav a{
 }
 
 /*text effet*/
-h2 div {
+h3 div {
   display:inline-block;
   overflow:hidden;
   white-space:nowrap;
 }
 
-h2 div:first-of-type {    /* For increasing performance 
+h3 div:first-of-type {    /* For increasing performance 
                        ID/Class should've been used. 
                        For a small demo 
                        it's okaish for now */
   animation: showup 7s infinite;
 }
 
-h2 div:last-of-type {
+h3 div:last-of-type {
   width:0px;
   animation: reveal 7s infinite;
 }
 
-h2 div:last-of-type span {
+h3 div:last-of-type span {
   margin-left:-355px;
   animation: slidein 7s infinite;
 }
