@@ -30,7 +30,12 @@ header nav a{
   height: 500px;
 }
 .cardImg{
-  height: 275px;
+  height: 260px;
+}
+.university-lp p {
+
+  line-height: 1.5rem;
+
 }
 .accordion dl:after, .accordion-list:after {
   content: "";
@@ -194,80 +199,51 @@ header nav a{
     font-weight: bold;
 }
 
-.pembatas{
-    display: block;
-    height: auto;
-    overflow: hidden;
-    box-sizing: border-box;
-    background: transparent;
+/*text effet*/
+h3 div {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
 }
 
-.pembatas ul{
-    position: relative;
-    width: 450px;
-    margin-left: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+h3 div:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 7s infinite;
 }
 
-.pembatas ul il {
-    display: flex;
-    background: rgba(255,255,255,.1);
-    padding: 10px 20px;
-    color: #fff;
-    margin: 5px 0;
-    transition: .5s;
+h3 div:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
 }
 
-.pembatas ul li:nth-child(1){
-    background: rgba(255,255,255,.55);
+h3 div:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
 }
 
-.pembatas ul li:nth-child(2){
-    background: rgba(255,255,255,.5);
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
 }
 
-.pembatas ul li:nth-child(3){
-    background: rgba(255,255,255,.4);
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
 }
 
-.pembatas ul li:nth-child(4){
-    background: rgba(255,255,255,.3);
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
 }
-
-.pembatas ul li:nth-child(5){ 
-    background: rgba(255,255,255,.2);
-}
-
-.pembatas ul li span:nth-child(1){
-    width: 30px;
-}
-
-.pembatas ul li span:nth-child(2){
-    width: 200px;
-}
-
-.pembatas ul li span:nth-child(3){
-    width: 100px;
-    text-align: right;
-}
-
-.pembatas ul li span:nth-child(4){
-    width: 70px;
-    text-align: right;
-}
-
-.pembatas ul li:hover{
-    transform: scale(1.06);
-    background: #2196F3;
-}
-
-.pembatas ul li a{
-    color: aqua;
-}
-
 
 html,
     body,
