@@ -1,6 +1,8 @@
 # Gps_tracker
-
-landing page for nextlan solution
+<p align="center">
+  <img src='./public/img/nextlan_solution_gps_tracker_background.jpg' alt="nextlan_solution_gps_tracker_background.jpg"/>
+</p>
+<p>landing page for <a href="https://nextlansolution.com">nextlansolution</a></p>
 
 ### Installing
 
@@ -26,5 +28,5 @@ This site was built using [nodejs](https://nodejs.org/) for backend, and [javasc
 ) and [css](https://developer.mozilla.org/fr/docs/Web/CSS/Reference) for frond-end with [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/) for offline mode.
 
 ### Authors
-- @clotair
-- @ghomsi
+- [@fez2000](https://github.com/fez2000)
+- [@ghomsi](https://github.com/ghomsi)

@@ -622,6 +622,9 @@
                           </ul>
                         </div>       
                       </div>
+                      <div class="row mt-3 justify-content-center">
+                        <div class="btn btn-primary" onclick="commande('commande kit GPS pour personnes vehicules et autres')">Commander</div>
+                      </div>
                     </div>
 
               </dd>
@@ -664,6 +667,9 @@
                             <li>Historique des parcours sur les 6 derniers mois</li>
                           </ul>
                         </div>       
+                      </div>
+                      <div class="row mt-3 justify-content-center">
+                        <div class="btn btn-primary" onclick="commande('commande kit GPS pour camions, bus et engins')">Commander</div>
                       </div>
                     </div>
               </dd>
@@ -711,6 +717,9 @@
                     </div>       
                   </div>
                 </div>
+                <div class="row mt-3 justify-content-center">
+                  <div class="btn btn-primary" onclick="commande('commande kit GPS pour control de carburant')">Commander</div>
+                </div>
               </dd>
                <dt>
                 <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
@@ -719,6 +728,9 @@
               </dt>
               <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
                 <p class="text-center  mt-3"> Devis en fonction du nombre de caméra à installer</p>
+                <div class="row mt-3 justify-content-center">
+                  <div class="btn btn-primary" onclick="commande('commande kit GPS pour camera embarquée')">Commander</div>
+                </div>
               </dd>
               <dt>
                 <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
@@ -754,7 +766,10 @@
                               <li>Géolocalisation et traçage en temps réel</li>
                             </ul>
                           </div>       
-                        </div>
+                      </div>
+                      <div class="row mt-3 justify-content-center">
+                        <div class="btn btn-primary" onclick="commande('commande kit GPS pour moto')">Commander</div>
+                      </div>
                     </div>
               </dd>
               <dt>
@@ -792,6 +807,9 @@
                             <li>Coupure et activation du moteur à distance</li>
                           </ul>
                         </div>       
+                      </div>
+                      <div class="row mt-3 justify-content-center">
+                        <div class="btn btn-primary" onclick="commande('commande kit GPS pour taxis')">Commander</div>
                       </div>
                     </div>
 
@@ -1303,7 +1321,7 @@
                     <div class="col-md-6">
                         <div class="md-form mb-0">
                             <input type="text" id="name" name="name" class="form-control" required>
-                            <label for="name" class="">Votre name</label>
+                            <label for="name" class="">Votre nom</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -1398,7 +1416,24 @@
 
   </footer>
   <!--Footer-->
+  <!--preloader-->
+  <div id="loader-wrapper">
+      <div id="loader"><img style="position: absolute;
 
+        top: 4%;
+        
+        z-index: 1040;
+        
+        
+        width: 60%;
+        height: 80%;
+        left: 20%;"  src="img/preload.gif" alt="nextlansoltion preloader"/></div>
+   
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+   
+  </div>
+  <!--preloader-->
   <!--SCRIPTS-->
   <script type="text/javascript" src="polyfills.js"></script>
   <script type="text/javascript">
@@ -1421,8 +1456,16 @@
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
         });
+        
       });
     }
+    document.addEventListener('load',function(e){
+      alert("hello");
+      e.preventDefault();
+      $(this).css({
+        'background-color':'blue'
+    });
+  })
   </script>
   <!--JQuery-->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -1454,8 +1497,13 @@
       trigger: 'hover',
       placement: 'bottom',
     });
+    setTimeout(function(){
+        $('body').addClass('loaded');
+        $('#loader').hide();
+    }, 3000);
   </script>
   <script>
+
     function validateForm() {
 
       document.getElementById('status').innerHTML = "Sending...";
@@ -1486,6 +1534,13 @@
 
 
 
+    }
+
+  //commande kit
+    function commande(text){
+      $("#subject").val(text).trigger('focus');
+    
+      
     }
     //uses classList, setAttribute, and querySelectorAll
   //if you want this to work in IE8/9 youll need to polyfill these
