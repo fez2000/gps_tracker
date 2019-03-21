@@ -1,3 +1,290 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+body {
+  font-family: 'Lato';
+}
+header nav a{
+  color: white;
+}
+.responsive{
+    width: 50px;
+    height: auto;
+}
+.font{
+  font-size: x-large;
+}
+.heading-primary {
+  font-size: 2em;
+  padding: 2em;
+  text-align: center;
+}
+.accordion dl, .accordion-list {
+  border: 1px solid #ddd;
+}
+.font-size-smaller{
+  font-size: smaller;
+}
+.avatar{
+  height: 200px;
+}
+.photoAvatar{
+  height: 150px;
+}
+.card{
+  height: 500px;
+}
+.cardImg{
+  height: 275px;
+}
+.accordion dl:after, .accordion-list:after {
+  content: "";
+  display: block;
+  height: 1em;
+  width: 100%;
+  background-color: #4285f4;
+}
+.accordion dd, .accordion__panel {
+  background-color: #eee;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.accordion p {
+  padding: 1em 2em 1em 2em;
+}
+.accordion {
+  position: relative;
+  background-color: #eee;
+}
+.con {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em 0 2em 0;
+}
+.accordionTitle, .accordion__Heading {
+  background-color: #4285f4;
+  text-align: center;
+  font-weight: 700;
+  padding: 2em;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.5s ease-in-out;
+  border-bottom: 1px solid #1b2a48;
+}
+.accordionTitle:before, .accordion__Heading:before {
+  content: "+";
+  font-size: 1.5em;
+  line-height: 0.5em;
+  float: left;
+  transition: transform 0.3s ease-in-out;
+}
+.accordionTitle:hover, .accordion__Heading:hover {
+  background-color: #13488a;
+}
+.accordionTitleActive, .accordionTitle.is-expanded {
+  background-color: #1d1fa7;
+}
+.accordionTitleActive:before, .accordionTitle.is-expanded:before {
+  transform: rotate(-225deg);
+}
+
+.accordionItem {
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+  transition: max-height 1s;
+}
+.arrow {
+  list-style: square inside url("/img/arrow.svg");
+}
+@media screen and (min-width: 48em) {
+  .accordionItem {
+    max-height: 30em;
+    transition: max-height 0.5s;
+  }
+}
+.accordionItem.is-collapsed {
+  max-height: 0;
+}
+.no-js .accordionItem.is-collapsed {
+  max-height: auto;
+}
+.animateIn {
+  animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+.animateOut {
+  animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+    transform-origin: 50% 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes accordionOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+  }
+}
+
+.geo-svg-container{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+
+.description-container{
+    margin: auto;
+    width: auto;
+}
+.description-card{
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.description-card .description-text{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.description-card .description-footer{
+    color: #fff;
+    width: 100%;
+    background-color: #4285f4;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;  
+}
+
+.description-card .description-footer .header{
+    padding: 10px;
+    min-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.description-card .description-footer .part{
+    width: 24%;
+    padding: 5px;
+    padding-top: 20px;
+    text-align: center;
+    display: inline-block;
+    border-right: 1px solid #757575;
+}
+
+.description-card .description-footer .part:last-child{
+    border: none;
+}
+
+.description-card .description-footer .part i{
+    font-size: 20px;
+}
+
+.description-card .description-footer .part .label{
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/*text effet*/
+h3 div {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+h3 div:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 7s infinite;
+}
+
+h3 div:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+h3 div:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+html,
+    body,
+    header,
+    .jarallax {
+      height: 800px;
+    }
+
+    @media (min-width: 560px) and (max-width: 740px) {
+      html,
+      body,
+      header,
+      .jarallax {
+        height: 500px;
+      }
+   
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      html,
+      body,
+      header,
+      .jarallax {
+        height: 500px;
+      }
+   
+    }
+    @media (min-width:980px) and (max-width:1200px){
+      .ld{
+        display: none;
+      }
+    }
+    @media (min-width: 800px) and (max-width: 850px) {
+        .navbar:not(.top-nav-collapse) {
+            background: #007bff!important;
+        }
+        .navbar {
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12) !important;
+        }
+    }
+=======
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 body {
@@ -339,3 +626,4 @@ html,
           box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12) !important;
         }
     }
+
