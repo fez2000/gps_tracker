@@ -2,7 +2,7 @@
 <p align="center">
   <img src='./public/img/nextlan_solution_gps_tracker_background.jpg' alt="nextlan_solution_gps_tracker_background.jpg"/>
 </p>
-landing page for [nextlansolution](https://nextlansolution.com)
+<p>landing page for <a href="https://nextlansolution.com">nextlansolution</a></p>
 
 ### Installing
 
