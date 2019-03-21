@@ -1416,7 +1416,24 @@
 
   </footer>
   <!--Footer-->
+  <!--preloader-->
+  <div id="loader-wrapper">
+      <div id="loader"><img style="position: absolute;
 
+        top: 4%;
+        
+        z-index: 1040;
+        
+        
+        width: 60%;
+        height: 80%;
+        left: 20%;"  src="img/preload.gif" alt="nextlansoltion preloader"/></div>
+   
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+   
+  </div>
+  <!--preloader-->
   <!--SCRIPTS-->
   <script type="text/javascript" src="polyfills.js"></script>
   <script type="text/javascript">
@@ -1439,8 +1456,16 @@
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
         });
+        
       });
     }
+    document.addEventListener('load',function(e){
+      alert("hello");
+      e.preventDefault();
+      $(this).css({
+        'background-color':'blue'
+    });
+  })
   </script>
   <!--JQuery-->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -1472,8 +1497,13 @@
       trigger: 'hover',
       placement: 'bottom',
     });
+    setTimeout(function(){
+        $('body').addClass('loaded');
+        $('#loader').hide();
+    }, 3000);
   </script>
   <script>
+
     function validateForm() {
 
       document.getElementById('status').innerHTML = "Sending...";
@@ -1510,7 +1540,7 @@
     function commande(text){
       $("#subject").val(text).trigger('focus');
     
-      //$(document).scrollTop($(document).outerHeight()-$("#contact-form").outerHeight() -100);
+      
     }
     //uses classList, setAttribute, and querySelectorAll
   //if you want this to work in IE8/9 youll need to polyfill these
