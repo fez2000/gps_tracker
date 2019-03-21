@@ -22,12 +22,15 @@ app.use((req, res, next) => {
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true)
     // Pass to next layer of middleware
+
     next()
   })
  .use(express.static(__dirname + '/public'))
 
 .use(favicon(__dirname + '/public/favicon.ico'))
-
+.use(function(req,res){
+  res.status(404).sendFile( __dirname+'/public/404.html');
+})
 
 
 
