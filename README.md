@@ -28,5 +28,5 @@ This site was built using [nodejs](https://nodejs.org/) for backend, and [javasc
 ) and [css](https://developer.mozilla.org/fr/docs/Web/CSS/Reference) for frond-end with [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/) for offline mode.
 
 ### Authors
-- [@fez2000](https://github.com/fez200)
+- [@fez2000](https://github.com/fez2000)
 - [@ghomsi](https://github.com/ghomsi)
