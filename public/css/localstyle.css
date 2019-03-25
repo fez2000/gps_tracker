@@ -11,6 +11,9 @@ header nav a{
     width: 50px;
     height: auto;
 }
+.justify{
+  text-align: justify;
+}
 .font{
   font-size: x-large;
 }
@@ -284,7 +287,7 @@ html,
           box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12) !important;
         }
     }
-=======
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 body {
