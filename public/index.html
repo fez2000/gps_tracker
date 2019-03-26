@@ -1289,7 +1289,30 @@
 
   </main>
   <!--Main content-->
+<!-- Modal -->
+<div class="modal fade" id="gps_location_map" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" >Localisation</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            
+          <div class="gmap_canvas">
+              <iframe  id="gmap_canvas" height="400px" src="https://maps.google.com/maps?q=TSINGA%20Face%20Camp%20SIC%2C%20Yaounde%2C%20Cameroun&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+              </iframe>
+          </div>
+              <style>.gmap_canvas body{padding-top: unset; padding-bottom: unset; } ;.gmap_canvas {overflow:hidden;background:none!important;height: 400px;width:100%;}</style>
+            
+        </div>
 
+      </div>
+    </div>
+  </div>
+  <!--Modal-->
   <!--Footer-->
   <footer class="page-footer text-center text-md-left mdb-color darken-3">
 
@@ -1378,15 +1401,16 @@
         <!--Grid column-->
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
-                <li accesskey="c"><i class="fas fa-map-marker-alt fa-2x"></i>
+                <a data-toggle="modal" data-target="#gps_location_map">
+                  <li accesskey="c"><i class="fas fa-map-marker-alt fa-2x"></i>
                     <p>TSINGA Face Camp SIC, Yaounde, Cameroun</p>
-                </li>
-
+                  </li>
+                </a>
                 <li accesskey="c"><i class="fas fa-phone mt-4 fa-2x"></i>
                     <p>+ 237 695 41 31 06,<br/>+ 237 677 34 51 01,<br/>+ 237 677 65 24 07</p>
                 </li>
 
-                <li accesskey="c"><a target="_blank" href="http://panelhost0.weloobe.com/rainloop/index.php"><i class="fas fa-envelope mt-4 fa-2x"></i></a>
+                <li accesskey="c"><a title="Ecrivez nous" target="_blank" href="http://panelhost0.weloobe.com/rainloop/index.php"><i class="fas fa-envelope mt-4 fa-2x"></i></a>
                     <p>contact@nextlansolutions.com</p>
                 </li>
             </ul>
