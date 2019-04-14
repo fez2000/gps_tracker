@@ -327,6 +327,9 @@ header nav a{
   line-height: 1.5rem;
 
 }
+.loaded{
+  visibility: visible;
+}
 #loader-wrapper .loader-section {
   position: fixed;
   top: 0;
