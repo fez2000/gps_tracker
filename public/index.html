@@ -6,33 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Nextlan Solution</title>
-  <!-- Font Awesome -->
+  
   <meta name="author" lang="fr" content="FEZEU Eugene fez2000, KEMCHE Adrien">
-  <meta name="description" content="Crée en 2016, Nextlan Solutions est une entreprise
-    fournissant des services de protection de pointe pour les véhicules
-    et les biens...">
+  <meta name="description" content="Crée en 2016, Nextlan Solutions est une entreprise fournissant des services de protection de pointe pour les véhicules et les biens...">
   <meta name="keywords" content="GPS, Tracker, voiture, Géolocalisation, Cameroun ,protection, Surveillance, controle">
   <meta name="reply-to" content="contact@nextlansolutions.com">
-  <meta name="identifier-url" content="http://nextlansolutions.com">
+  <meta name="identifier-url" content="https://nextlansolutions.com">
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="img/nextran2.png">    
+  <link rel="icon" href="img/nextlansolutions_logo.png">    
+  <meta name="theme-color" content="#007bff">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">
   <link href="css/localstyle.css" rel="stylesheet">
+  
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes"> <!-- fallback for manifest.json -->
+  <meta name="application-name" content="nextlansolutions">
+  <!-- G+ sharing meta data -->
+  <meta itemprop="name" content="Mksms">
+  <meta itemprop="description" content="send sms free to all operators in cameroon">
+  <meta itemprop="image" content="/img/nextlansolutions_logo.png">
+  <meta itemprop="startDate" content="2019-07-05T09:00:00+03:00">
+  <meta itemprop="endDate" content="2019-10-05T19:00:00+03:00">
+
+  <!-- Facebook sharing meta data -->
+  <meta property="og:title" content="Gps tracker solution">
+  <meta property="og:site_name" content="nextlansolutions">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nextlansolutions.com">
+  <meta property="og:description" content="Crée en 2016, Nextlan Solutions est une entreprise fournissant des services de protection de pointe pour les véhicules et les biens...">
+  <meta property="og:image" content="/img/nextlansolutions_logo.png">
+  <meta property="og:image:type" content="image/png" />
+
+  <!-- Twitter meta data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@Mboatek">
+  <meta name="twitter:title" content="Gps tracker solution">
+  <meta name="twitter:description" content="Crée en 2016, Nextlan Solutions est une entreprise fournissant des services de protection de pointe pour les véhicules et les biens...">
+  <meta name="twitter:image" content="/img/nextlansolutions_logo.png">
+
 </head>
 
 <body class="university-lp">
-
   
-  
+    <noscript>Please enable JavaScript to continue using this application.</noscript>
   <!--SCRIPTS-->
 
   <!--JQuery-->
   <script  src="js/jquery-3.3.1.min.js"></script>
-  <script  src="polyfills.js"></script>
+  <script  async src="polyfills.js"></script>
   <script >
     if ('serviceWorker' in navigator) {
       let deferredPrompt;
@@ -49,10 +75,10 @@
       navigator.serviceWorker.register('/sw.js').then(function(registration) {
       // Registration was successful
       
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      //console.log('ServiceWorker registration successful with scope: ', registration.scope);
     } , function(err) {
         // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
+        //console.log('ServiceWorker registration failed: ', err);
         });
         
       });
@@ -60,28 +86,31 @@
    
   </script>
   <!--Bootstrap tooltips-->
-  <script  src="js/popper.min.js"></script>
+  <script async src="js/popper.min.js"></script>
 
   <!--Bootstrap core JavaScript-->
-  <script  src="js/bootstrap.min.js"></script>
+  <script  async src="js/bootstrap.min.js"></script>
 
   <!--MDB core JavaScript-->
-  <script src="js/mdb.min.js"></script>
+  <script async src="js/mdb.min.js"></script>
 
-  <script>
+  <script async>
     $(document).ready(function(){
       $("body").append(
         $("<div/>").attr("id","loader-wrapper")
         .append(
           $("<div/>").attr({"id":"loader","alt":"nextlansoltions_gps_tracker_preloader"}).css({
           "position": "fixed",
-          "top": "4%",
+          "top": "0",
           "z-index": "1040",
-          "width": "60%",
-          "height": "80%",
-          "left": "20%",
+          "width": "100%",
+          "height": "100%",
+          "left": "0",
           "background-position-x": "center",
-          "background-image":"url(img/nextlansolutions_gps_tracker_preload.gif)"
+          "background-image":"url(img/nextlansolutions_gps_tracker_preload.gif)",
+          "background-size":"100%",
+          "background-repeat":"no-repeat",
+          "background-position": "center"
           })
         ).append(
           $("<div/>").addClass("loader-section section-left")
@@ -124,111 +153,218 @@
     
     
   </script>
-  <script>
-
-    function validateForm() {
-
-      document.getElementById('status').innerHTML = "Sending...";
-      formData = {
-          'name'     : $('input[name=name]').val(),
-          'email'    : $('input[name=email]').val(),
-          'subject'  : $('input[name=subject]').val(),
-          'message'  : $('textarea[name=message]').val()
-      };
-
-
-      $.ajax({
-        url : "mail.php",
-        type: "POST",
-        data : formData,
-        success: function(data, textStatus, jqXHR)
+  <script async type="application/ld+json">
+    { "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "name": "Nextlansolutions",
+      "url" : "http://nextlansolutions.com",
+      "email": "contact@nextlansolutions.com",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "3.884202",
+        "longitude": "11.506342"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Yaounde, Cameroun",
+        "addressRegion": "Center",
+        "streetAddress": "TSINGA Face Camp SIC"
+      },
+      "contactPoint" : [
+        { "@type" : "ContactPoint",
+          "telephone" : "+237-695413106",
+          "contactType" : "customer service",
+          "contactOption" : "TollFree"
+        } , {
+          "@type" : "ContactPoint",
+          "telephone" : "+237-677652407",
+          "contactType" : "customer service"
+        }  , {
+          "@type" : "ContactPoint",
+          "telephone" : "+237-677345101",
+          "contactType" : "technical support",
+          "contactOption" : "TollFree",
+          "availableLanguage" : ["English","French"]
+        }  ]
+      ,
+      "hasOfferCatalog":{
+        "@type": "OfferCatalog",
+        "name": "Gps tracker service",
+        "itemListElement":[
           {
-
-            $('#status').text(data.message);
-            if (data.code) //If mail was sent successfully, reset the form.
-            $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+            "@type": "OfferCatalog",
+            "name": "Geolocalisation",
+            "itemListElement":[
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "La position en temps réel du véhicule"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "L’historique du parcours du véhicule sur une période donnée"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "La réception des notifications lorsque le véhicule sort de sa zone de circulation (GEOFENCE)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "La Localisation du véhicule en cas de vol ou d’un quelconque incident"
+                }
+              }
+            ]
           },
-        error: function (jqXHR, textStatus, errorThrown)
           {
-            $('#status').text(jqXHR);
+            "@type": "OfferCatalog",
+            "name": "Camera Ambarquée",
+            "itemListElement":[
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "l’Enregistrement et la transmission des images en temps réel (Streaming) vers votre téléphone ou ordinateur"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "La vidéo en différé (possibilité de revoir les enregistrements anciens)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Des caméras à infra-rouge pour une optimisation de la qualité et la lisibilité des enregistrements en milieu obscur."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Gestion de Flotte",
+            "itemListElement":[
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Le Suivi des activités"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "La gestion et l’évaluation des chauffeurs"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Le Suivi du kilométrage"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "La Planification des Vidanges et notification de rappel"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Améliorer l’efficacité et la performance des conducteurs"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Réduire les accidents et les dommages liés"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Optimiser l’entretien des véhicules et réduire les pannes"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Enregistrer les historiques d’utilisation des véhicules"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Gestion Carburant",
+            "itemListElement":[
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Surveillance en continue du niveau de carburant"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Gestion par seuil d’alerte de niveau bas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Gestion multi-cuve, multi-site"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Gestion de l’approvisionnement en carburant de vos camions et sites de manière simple et éfficace"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Réduction des couts d’exploitation via la Télémétrie"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Réduction du taux des livraisons d’urgence."
+                }
+              }
+            ]
           }
-      });
-
-
-
-    }
-
-  //commande kit
-    function commande(text){
-      $("#subject").val(text).trigger('focus');
-    
-      
-    }
-    //uses classList, setAttribute, and querySelectorAll
-  //if you want this to work in IE8/9 youll need to polyfill these
-  (function(){
-	  var d = document,
-	  accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
-	  setAria,
-	  setAccordionAria,
-	  switchAccordion,
-    touchSupported = ('ontouchstart' in window),
-    pointerSupported = ('pointerdown' in window);
-  
-    skipClickDelay = function(e){
-      e.preventDefault();
-      e.target.click();
-    }
-
-		setAriaAttr = function(el, ariaType, newProperty){
-		  el.setAttribute(ariaType, newProperty);
-	  };
-	  setAccordionAria = function(el1, el2, expanded){
-		switch(expanded) {
-      case "true":
-      	setAriaAttr(el1, 'aria-expanded', 'true');
-      	setAriaAttr(el2, 'aria-hidden', 'false');
-      	break;
-      case "false":
-      	setAriaAttr(el1, 'aria-expanded', 'false');
-      	setAriaAttr(el2, 'aria-hidden', 'true');
-      	break;
-      default:
-				break;
-		}
-  };
-  var passiveSupported = false;
-
-
-  //function
-  switchAccordion = function(e) {
-    console.log("triggered");
-	  e.preventDefault();
-	  var thisAnswer = e.target.parentNode.nextElementSibling;
-	  var thisQuestion = e.target;
-	  if(thisAnswer.classList.contains('is-collapsed')) {
-		  setAccordionAria(thisQuestion, thisAnswer, 'true');
-	  } else {
-		  setAccordionAria(thisQuestion, thisAnswer, 'false');
-	  }
-  	thisQuestion.classList.toggle('is-collapsed');
-  	thisQuestion.classList.toggle('is-expanded');
-		thisAnswer.classList.toggle('is-collapsed');
-		thisAnswer.classList.toggle('is-expanded');
- 	
-  	thisAnswer.classList.toggle('animateIn');
-	};
-	for (var i=0,len=accordionToggles.length; i<len; i++) {
-		if(touchSupported) {
-      accordionToggles[i].addEventListener('touchstart', skipClickDelay,  false);
-    }
-    if(pointerSupported){
-      accordionToggles[i].addEventListener('pointerdown', skipClickDelay,  false);
-    }
-    accordionToggles[i].addEventListener('click', switchAccordion,  false);
-  }
-  })();
-  </script>
+        ]
+      } }
+    </script>
 </body>
 
 </html>
