@@ -1,6 +1,6 @@
 # Gps_tracker
 <p align="center">
-  <img src='./public/img/nextlan_solutions_gps_tracker_background.jpg' alt="nextlan_solution_gps_tracker_background.jpg"/>
+  <img src='./public/img/nextlansolutions_gps_tracker_background.jpg' alt="nextlan_solution_gps_tracker_background.jpg"/>
 </p>
 <p>landing page for <a href="https://nextlansolutions.com">nextlansolution</a></p>
 
@@ -28,5 +28,5 @@ This site was built using [nodejs](https://nodejs.org/) for backend, and [javasc
 ) and [css](https://developer.mozilla.org/fr/docs/Web/CSS/Reference) for frond-end with [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/) for offline mode.
 
 ### Authors
-- [@fez2000](https://github.com/fez2000)
+- [@fez2000](https://github.com/fez2000), [about](https://fezeueugene.web.app)
 - [@ghomsi](https://github.com/ghomsi)
