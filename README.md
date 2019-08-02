@@ -1,6 +1,6 @@
 # Gps_tracker
 <p align="center">
-  <img src='./public/img/nextlan_solution_gps_tracker_background.jpg' alt="nextlan_solution_gps_tracker_background.jpg"/>
+  <img src='./public/img/nextlan_solutions_gps_tracker_background.jpg' alt="nextlan_solution_gps_tracker_background.jpg"/>
 </p>
 <p>landing page for <a href="https://nextlansolutions.com">nextlansolution</a></p>
 
