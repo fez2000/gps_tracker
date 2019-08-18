@@ -8,7 +8,7 @@
   <title>Nextlan Solution</title>
   
   <meta name="author" lang="fr" content="FEZEU Eugene fez2000, KEMCHE Adrien"/>
-  <meta name="description" content="Crée en 2016, Nextlan Solutions est une entreprise fournissant des services de protection de pointe pour les véhicules et les biens..."/>
+  <meta name="description" content="Crée en 2016, Nextlan Solutions est une entreprise Camerounaise fournissant des services de protection(Geolocalisation, tracking, gps) de pointe pour les véhicules et les biens..."/>
   <meta name="keywords" content="GPS, Tracker, voiture, Géolocalisation, Cameroun ,protection, Surveillance, controle"/>
   <meta name="reply-to" content="contact@nextlansolutions.com"/>
   <meta name="identifier-url" content="https://nextlansolutions.com"/>
@@ -53,9 +53,8 @@
   <!--SCRIPTS-->
 
   <!--JQuery-->
-  <script  src="js/jquery-3.3.1.min.js"></script>
-  <script  type="module" src="polyfills.js"></script>
-  <script >
+  <script type="module" src="js/jquery-3.3.1.min.js"></script>
+  <script async >
     if ('serviceWorker' in navigator) {
       let deferredPrompt;
       
@@ -90,7 +89,7 @@
   <!--MDB core JavaScript-->
   <script type="module" src="js/mdb.min.js"></script>
 
-  <script type="module">
+  <script async>
     $(document).ready(function(){
       $("body").append(
         $("<div/>").attr("id","loader-wrapper")
@@ -144,218 +143,8 @@
         }
       });
     });
-    
-    
-    
-    
   </script>
-  <script async type="application/ld+json">
-    { "@context" : "http://schema.org",
-      "@type" : "Organization",
-      "name": "Nextlansolutions",
-      "url" : "https://nextlansolutions.com",
-      "email": "contact@nextlansolutions.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Yaounde, Cameroun",
-        "addressRegion": "Center",
-        "streetAddress": "TSINGA Face Camp SIC"
-      },
-      "contactPoint" : [
-        { "@type" : "ContactPoint",
-          "telephone" : "+237-695413106",
-          "contactType" : "customer service",
-          "contactOption" : "TollFree"
-        } , {
-          "@type" : "ContactPoint",
-          "telephone" : "+237-677652407",
-          "contactType" : "customer service"
-        }  , {
-          "@type" : "ContactPoint",
-          "telephone" : "+237-677345101",
-          "contactType" : "technical support",
-          "contactOption" : "TollFree",
-          "availableLanguage" : ["English","French"]
-        }  ]
-      ,
-      "hasOfferCatalog":{
-        "@type": "OfferCatalog",
-        "name": "Gps tracker service",
-        "itemListElement":[
-          {
-            "@type": "OfferCatalog",
-            "name": "Geolocalisation",
-            "itemListElement":[
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "La position en temps réel du véhicule"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "L’historique du parcours du véhicule sur une période donnée"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "La réception des notifications lorsque le véhicule sort de sa zone de circulation (GEOFENCE)"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "La Localisation du véhicule en cas de vol ou d’un quelconque incident"
-                }
-              }
-            ]
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Camera Ambarquée",
-            "itemListElement":[
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "l’Enregistrement et la transmission des images en temps réel (Streaming) vers votre téléphone ou ordinateur"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "La vidéo en différé (possibilité de revoir les enregistrements anciens)"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Des caméras à infra-rouge pour une optimisation de la qualité et la lisibilité des enregistrements en milieu obscur."
-                }
-              }
-            ]
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Gestion de Flotte",
-            "itemListElement":[
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Le Suivi des activités"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "La gestion et l’évaluation des chauffeurs"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Le Suivi du kilométrage"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "La Planification des Vidanges et notification de rappel"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Améliorer l’efficacité et la performance des conducteurs"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Réduire les accidents et les dommages liés"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Optimiser l’entretien des véhicules et réduire les pannes"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Enregistrer les historiques d’utilisation des véhicules"
-                }
-              }
-            ]
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Gestion Carburant",
-            "itemListElement":[
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Surveillance en continue du niveau de carburant"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Gestion par seuil d’alerte de niveau bas"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Gestion multi-cuve, multi-site"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Gestion de l’approvisionnement en carburant de vos camions et sites de manière simple et éfficace"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Réduction des couts d’exploitation via la Télémétrie"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Réduction du taux des livraisons d’urgence."
-                }
-              }
-            ]
-          }
-        ]
-      } }
-    </script>
+  <script type="application/ld+json" src="/schema.json"></script>
 </body>
 
 </html>
