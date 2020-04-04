@@ -5,46 +5,62 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-  <title>Nextlan Solution</title>
+  <title>Nextlan Solutions: GPS Tracker solution de tracking et protection de flotte au cameroun</title>
   
-  <meta name="author" lang="fr" content="FEZEU Eugene fez2000, KEMCHE Adrien"/>
-  <meta name="description" content="Crée en 2016, Nextlan Solutions est une entreprise Camerounaise fournissant des services de protection(Geolocalisation, tracking, gps) de pointe pour les véhicules et les biens..."/>
-  <meta name="keywords" content="GPS, Tracker, voiture, Géolocalisation, Cameroun ,protection, Surveillance, controle"/>
+  <meta name="author" lang="fr" content="FEZEU Eugene @fez2000, KEMCHE Adrien @gdev"/>
+  <meta name="description" content="Crée en 2016, Nextlan Solutions est une entreprise Camerounaise fournissant des services de protection(Geolocalisation, tracking, gps) de pointe pour les véhicules et les biens. "/>
+  <meta name="keywords" content="GPS Tracker, Pister ma voiture, Géolocalisation au Cameroun, protection de flot, Surveillance, controle"/>
   <meta name="reply-to" content="contact@nextlansolutions.com"/>
   <meta name="identifier-url" content="https://nextlansolutions.com"/>
+   <!-- fallback for manifest.json -->
   <link rel="manifest" href="manifest.json"/>
   <link rel="icon" href="img/nextlansolutions_logo.png"/>    
   <meta name="theme-color" content="#007bff"/>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" defer href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" defer rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <link href="css/localstyle.css" rel="stylesheet">
+  <link href="css/mdb.min.css" defer rel="stylesheet">
+  <link href="css/localstyle.css" defer rel="stylesheet">
   
   <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes"> <!-- fallback for manifest.json -->
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="nextlansolutions">
 
-
   <!-- Facebook sharing meta data -->
-  <meta property="og:title" content="Gps tracker solution">
+  <meta property="og:title" content="Gps tracker & solution">
   <meta property="og:site_name" content="nextlansolutions">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nextlansolutions.com">
-  <meta property="og:description" content="Crée en 2016, Nextlan Solutions est une entreprise fournissant des services de protection de pointe pour les véhicules et les biens...">
+  <meta property="og:description" content="Crée en 2016, Nextlan Solutions est une entreprise fournissant des services de protection de pointe pour les véhicules et les biens. Notre produit GPS Tracker est doté d'une technologie de pointe unique, qui vous 
+  permet de contrôler et sécuriser votre flottes ">
   <meta property="og:image" content="/img/nextlansolutions_logo.png">
   <meta property="og:image:type" content="image/png" />
 
   <!-- Twitter meta data -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:creator" content="@Mboatek">
-  <meta name="twitter:title" content="Gps tracker solution">
+  <meta name="twitter:creator" content="@nextlansolutions">
+  <meta name="twitter:title" content="Gps tracker et solutions">
   <meta name="twitter:description" content="Crée en 2016, Nextlan Solutions est une entreprise fournissant des services de protection de pointe pour les véhicules et les biens...">
   <meta name="twitter:image" content="/img/nextlansolutions_logo.png">
+  <!-- Google search console -->
   <meta name="google-site-verification" content="14uH27-tp5PSwVBWwUPN-pVrxtpAZRqPrSK64gVy82c" />
-
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//analytics.weloobe.com/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '7']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
 </head>
 
 <body class="university-lp">
@@ -53,7 +69,7 @@
   <!--SCRIPTS-->
 
   <!--JQuery-->
-  <script type="module" src="js/jquery-3.3.1.min.js"></script>
+  <script  src="js/jquery-3.3.1.min.js"></script>
   <script async >
     if ('serviceWorker' in navigator) {
       let deferredPrompt;
@@ -69,7 +85,6 @@
       window.addEventListener('load', function() {
       navigator.serviceWorker.register('/sw.js').then(function(registration) {
       // Registration was successful
-      
       //console.log('ServiceWorker registration successful with scope: ', registration.scope);
     } , function(err) {
         // registration failed :(
@@ -78,18 +93,14 @@
         
       });
     }
-   
   </script>
   <!--Bootstrap tooltips-->
-  <script type="module" src="js/popper.min.js"></script>
-
+  <script defer src="js/popper.min.js"></script>
   <!--Bootstrap core JavaScript-->
-  <script  type="module" src="js/bootstrap.min.js"></script>
-
+  <script defer async  src="js/bootstrap.min.js"></script>
   <!--MDB core JavaScript-->
-  <script type="module" src="js/mdb.min.js"></script>
-
-  <script async>
+  <script defer async  src="js/mdb.min.js"></script>
+  <script defer async>
     $(document).ready(function(){
       $("body").append(
         $("<div/>").attr("id","loader-wrapper")
@@ -115,19 +126,15 @@
       );
       $.get({
         url:"/body.html",
-        success:(data)=>{
-          
+        success:(data)=>{         
           setTimeout(()=>{$('body').append(data);},2000)
-          
           setTimeout(()=>{
             //Animation init
             new WOW().init();
-
             //Modal
             $('#myModal').on('shown.bs.modal', function () {
               $('#myInput').focus()
             })
-
             // Material Select Initialization
             $(document).ready(function () {
               $('.mdb-select').material_select();
@@ -144,7 +151,216 @@
       });
     });
   </script>
-  <script type="application/ld+json" src="/schema.json"></script>
-</body>
+  <script type="application/ld+json" >
 
+{ 
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name": "Nextlansolutions",
+  "url" : "https://nextlansolutions.com",
+  "email": "contact@nextlansolutions.com",
+  "logo": "https://nextlansolutions.com/assets/icons/icon-192x192.png",
+  "image": "https://nextlansolutions.com/assets/icons/icon-512x512.png"
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Yaounde, Cameroun",
+    "addressRegion": "Center",
+    "streetAddress": "TSINGA Face Camp SIC"
+  },
+  "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+237-695413106",
+      "contactType" : "customer service",
+      "contactOption" : "TollFree"
+    } , {
+      "@type" : "ContactPoint",
+      "telephone" : "+237-677652407",
+      "contactType" : "customer service"
+    }  , {
+      "@type" : "ContactPoint",
+      "telephone" : "+237-677345101",
+      "contactType" : "technical support",
+      "contactOption" : "TollFree",
+      "availableLanguage" : ["English","French"]
+    }  ]
+  ,
+  "hasOfferCatalog":{
+    "@type": "OfferCatalog",
+    "name": "Gps tracker service",
+    "itemListElement":[
+      {
+        "@type": "OfferCatalog",
+        "name": "Geolocalisation",
+        "itemListElement":[
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "La position en temps réel du véhicule"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "L’historique du parcours du véhicule sur une période donnée"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "La réception des notifications lorsque le véhicule sort de sa zone de circulation (GEOFENCE)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "La Localisation du véhicule en cas de vol ou d’un quelconque incident"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Camera Ambarquée",
+        "itemListElement":[
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "l’Enregistrement et la transmission des images en temps réel (Streaming) vers votre téléphone ou ordinateur"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "La vidéo en différé (possibilité de revoir les enregistrements anciens)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Des caméras à infra-rouge pour une optimisation de la qualité et la lisibilité des enregistrements en milieu obscur."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Gestion de Flotte",
+        "itemListElement":[
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Le Suivi des activités"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "La gestion et l’évaluation des chauffeurs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Le Suivi du kilométrage"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "La Planification des Vidanges et notification de rappel"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Améliorer l’efficacité et la performance des conducteurs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Réduire les accidents et les dommages liés"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optimiser l’entretien des véhicules et réduire les pannes"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Enregistrer les historiques d’utilisation des véhicules"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Gestion Carburant",
+        "itemListElement":[
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Surveillance en continue du niveau de carburant"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gestion par seuil d’alerte de niveau bas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gestion multi-cuve, multi-site"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gestion de l’approvisionnement en carburant de vos camions et sites de manière simple et éfficace"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Réduction des couts d’exploitation via la Télémétrie"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Réduction du taux des livraisons d’urgence."
+            }
+          }
+        ]
+      }
+    ]
+  } }
+  </script>
+</body>
 </html>
