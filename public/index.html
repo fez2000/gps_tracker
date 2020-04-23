@@ -13,16 +13,10 @@
   <meta name="reply-to" content="contact@nextlansolutions.com"/>
   <meta name="identifier-url" content="https://nextlansolutions.com"/>
    <!-- fallback for manifest.json -->
-  <link rel="manifest" href="manifest.json"/>
-  <link rel="icon" href="img/nextlansolutions_logo.png"/>    
+  <link rel="manifest" href="/manifest.json"/>
+  <link rel="icon" href="/img/nextlansolutions_logo.png"/>    
   <meta name="theme-color" content="#007bff"/>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" defer href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" defer rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" defer rel="stylesheet">
-  <link href="css/localstyle.css" defer rel="stylesheet">
+  
   
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -95,19 +89,21 @@
     }
   </script>
   <!--Bootstrap tooltips-->
-  <script defer src="js/popper.min.js"></script>
+  <script  src="js/popper.min.js"></script>
   <!--Bootstrap core JavaScript-->
   <script defer async  src="js/bootstrap.min.js"></script>
   <!--MDB core JavaScript-->
   <script defer async  src="js/mdb.min.js"></script>
   <script defer async>
     $(document).ready(function(){
+      
       $("body").append(
         $("<div/>").attr("id","loader-wrapper")
         .append(
           $("<div/>").attr({"id":"loader","alt":"nextlansoltions_gps_tracker_preloader"}).css({
           "position": "fixed",
           "top": "0",
+          'background-color': '#1e7ff5',
           "z-index": "1040",
           "width": "100%",
           "height": "100%",
@@ -126,8 +122,27 @@
       );
       $.get({
         url:"/body.html",
-        success:(data)=>{         
-          setTimeout(()=>{$('body').append(data);},2000)
+        success:(data)=>{     
+          $("head")
+      .append(
+        $('<link/>').attr({
+          'href': "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
+          rel: "stylesheet"
+        }),
+        $('<link/>').attr({
+          'href': "/css/bootstrap.min.css",
+          rel: "stylesheet"
+        }),
+        $('<link/>').attr({
+          'href': "/css/mdb.min.css",
+          rel: "stylesheet"
+        }),
+        $('<link/>').attr({
+          'href': "/css/localstyle.css",
+          rel: "stylesheet"
+        })
+      )    
+          setTimeout(()=>{$('body').append(data);},1500)
           setTimeout(()=>{
             //Animation init
             new WOW().init();
@@ -146,7 +161,7 @@
             });            
             $('body').addClass('loaded');
             $('#loader').hide();
-          }, 3000);    
+          }, 2500);    
         }
       });
     });
