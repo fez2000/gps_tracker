@@ -12,16 +12,15 @@
   <meta name="keywords" content="GPS Tracker, Pister ma voiture, Géolocalisation au Cameroun, protection de flot, Surveillance, controle"/>
   <meta name="reply-to" content="contact@nextlansolutions.com"/>
   <meta name="identifier-url" content="https://nextlansolutions.com"/>
-   <!-- fallback for manifest.json -->
+   <link rel="preload" href="/img/nextlansolutions_gps_tracker_preload.gif" as="image" type="image/gif">
+  <!-- fallback for manifest.json -->
   <link rel="manifest" href="/manifest.json"/>
-  <link rel="icon" href="/img/nextlansolutions_logo.png"/>    
+  <link rel="icon" href="/img/nextlansolutions_logo.png"/> 
+
   <meta name="theme-color" content="#007bff"/>
-  
-  
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="nextlansolutions">
-
   <!-- Facebook sharing meta data -->
   <meta property="og:title" content="Gps tracker & solution">
   <meta property="og:site_name" content="nextlansolutions">
@@ -40,21 +39,7 @@
   <meta name="twitter:image" content="/img/nextlansolutions_logo.png">
   <!-- Google search console -->
   <meta name="google-site-verification" content="14uH27-tp5PSwVBWwUPN-pVrxtpAZRqPrSK64gVy82c" />
-  <!-- Matomo -->
-  <script type="text/javascript">
-    var _paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//analytics.weloobe.com/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '7']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
-  </script>
-  <!-- End Matomo Code -->
+  
 </head>
 
 <body class="university-lp">
@@ -64,7 +49,7 @@
 
   <!--JQuery-->
   <script  src="js/jquery-3.3.1.min.js"></script>
-  <script async >
+  <script  >
     if ('serviceWorker' in navigator) {
       let deferredPrompt;
       
@@ -109,7 +94,7 @@
           "height": "100%",
           "left": "0",
           "background-position-x": "center",
-          "background-image":"url(img/nextlansolutions_gps_tracker_preload.gif)",
+          "background-image":"url(/img/nextlansolutions_gps_tracker_preload.gif)",
           "background-size":"100%",
           "background-repeat":"no-repeat",
           "background-position": "center"
@@ -161,6 +146,7 @@
             });            
             $('body').addClass('loaded');
             $('#loader').hide();
+            setTimeout(()=>{$('body').remove('#loader-wrapper')},700); 
           }, 2500);    
         }
       });
